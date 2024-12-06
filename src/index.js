@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     res.status(404).json({ code: 404, message: 'Ruta no encontrada' });
 });
 
-const connectDB = require('./config/database.config');
+const connectDB = require('./config/db.js');
 
 dotenv.config();
 PORT = process.env.PORT;

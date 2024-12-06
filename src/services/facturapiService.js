@@ -4,7 +4,7 @@
 const Facturapi = require('facturapi').default;
 // b) Crea una instancia del cliente, usando la llave secreta
 //    de la organización emisora (https://dashboard.facturapi.io/integration/apikeys)
-const facturapi = new Facturapi('sk_test_o7zyr5JOj8NeV1DPXZ71DWYJbR69M0nA23RGqdag4v');
+const facturapi = new Facturapi('sk_test_Bb4GngjYKvzM7qX3Qg9YDBZ1ebd1V9NyAprPOaE2Rl');
 
 
 async function createProduct(product) {

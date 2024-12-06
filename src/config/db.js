@@ -1,18 +1,19 @@
-const mongoose = require('mongoose'); // Módulo para interactuar con MongoDB
 require('dotenv').config(); // Cargar variables de entorno desde un archivo .env
 
 // Conexión a MongoDB
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true, // Uso del nuevo parser
-    useUnifiedTopology: true, // Soporte para monitoreo del driver
-    })
-    .then(() => {
-        console.log('Conectado a MongoDB'); // Mensaje de éxito en la conexión
-    })
-    .catch((error) => {
-        console.error('Error al conectar a MongoDB:', error); // Mensaje de error en la conexión
-    });
+const mongoose = require('mongoose');
 
+const connectDB = async () => {
+    try {
+        const conn = await mongoose.connect(process.env.MONGO_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log(`MongoDB Conectado: ${conn.connection.host}`);
+    } catch (error) {
+        console.error(`Error: ${error.message}`);
+        process.exit(1); // Salir del proceso en caso de error
+    }
+};
 
-// Exportamos las instancias de mongoose y redisClient para usarlas en otras partes de la aplicación
-module.exports = { mongoose, redisClient };
+module.exports = connectDB;

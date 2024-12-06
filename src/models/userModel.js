@@ -1,3 +1,5 @@
+const mongoose = require('mongoose');
+
 const userSchema = new mongoose.Schema({
     facturapiId: { type: String },
     Name: { type: String, require: true },

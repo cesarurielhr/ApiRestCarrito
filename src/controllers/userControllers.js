@@ -1,4 +1,4 @@
-const User = require('../models/User'); // Modelo de usuario de Mongoose
+const User = require('../models/userModel'); // Modelo de usuario de Mongoose
 const { createUser, removedCustomer } = require('../services/facturapiService'); // Servicios de Facturapi
 
 // Obtener todos los usuarios
