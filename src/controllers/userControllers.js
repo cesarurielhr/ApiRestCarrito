@@ -29,10 +29,11 @@ exports.createUser = async (req, res) => {
         const facturapiResponse = await createUser(req.body);
         console.log('Usuario creado en Facturapi:', facturapiResponse);
 
-        // Guardar en MongoDB con el ID de Facturapi
+        // Guardar en MongoDB con el ID de Facturapi como _id
         const user = new User({
-            ...req.body,
-            facturapiId: facturapiResponse.id,
+            _id: facturapiResponse.id, // Asignar el ID de FacturAPI como _id
+            ...req.body, // Incluir el resto de los datos del cuerpo de la solicitud
+            facturapiId: facturapiResponse.id // Guardar el ID de FacturAPI por consistencia
         });
         await user.save();
 
@@ -42,6 +43,7 @@ exports.createUser = async (req, res) => {
         res.status(400).json({ message: 'No se pudo crear el usuario.' });
     }
 };
+
 
 // Eliminar un usuario de MongoDB y Facturapi
 exports.deleteUserByFacturapiId = async (req, res) => {
