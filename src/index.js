@@ -1,12 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const authRoutes = require('./routes/userRoutes');
+const carrito = require('./routes/carritoRoutes.js');
 const dotenv = require('dotenv');
 const app = express();
 
 
 app.use(bodyParser.json());
 app.use('/auth', authRoutes);
+app.use('/carrito', carrito)
 
 app.get('/', (req, res, next) => {
     res.send(
