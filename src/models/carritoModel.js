@@ -2,8 +2,6 @@ const mongoose = require('mongoose');
 
 const carritoSchema = new mongoose.Schema({
     clienteId: { type: String, required: true 
-
-        
     },
     items: [{
         productoId: { type: String, required: true },
@@ -25,4 +23,5 @@ carritoSchema.pre('save', function(next) {
     next();
 });
 
-module.exports = mongoose.model('Carrito', carritoSchema);
+const Carrito = mongoose.model('Carrito', carritoSchema);
+module.exports = Carrito;
