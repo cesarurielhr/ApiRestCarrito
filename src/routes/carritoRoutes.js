@@ -7,5 +7,5 @@ router.get('/carrito', carritoController.getCarritos);
 router.get('/:id', carritoController.getCarritoById); 
 router.post('/', carritoController.createCarrito); 
 router.delete('/', carritoController.deleteCarrito);
-
+router.post('/files',carritoController.fileUpload);
 module.exports = router;

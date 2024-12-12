@@ -74,4 +74,9 @@ exports.deleteCarrito = async (req, res) => {
         res.status(500).json({ message: 'No se pudo eliminar el carrito.' });
     }
 };
+exports.fileUpload = async (req, res) => {
+    // Implementación de la subida de archivos
+    console.log(req.files)
+    res.json({message:"subido"})
+};
 
