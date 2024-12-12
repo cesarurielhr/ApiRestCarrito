@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    _id: { type: String }, // Usamos _id como el facturapiId
+    _id: { type: String }, 
     Name: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
         required: true, 
         enum: ['Tarjeta', 'Paypal', 'Bitcoin', 'Tarjeta de Credito'] 
     }
-}, { _id: false }); // Desactiva la generación automática de _id
+}, { _id: false }); 
 
 const User = mongoose.model('User', userSchema);
 module.exports = User;

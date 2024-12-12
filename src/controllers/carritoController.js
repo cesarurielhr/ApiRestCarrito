@@ -74,3 +74,4 @@ exports.deleteCarrito = async (req, res) => {
         res.status(500).json({ message: 'No se pudo eliminar el carrito.' });
     }
 };
+
