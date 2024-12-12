@@ -1,5 +1,5 @@
 const Carrito = require('../models/carritoModel'); // Asegúrate de usar la ruta correcta del modelo
-
+const {uploadFile,getFiles,getFileURL} = require('../s3.js')
 // Crear un nuevo carrito
 exports.createCarrito = async (req, res) => {
     try {
@@ -76,7 +76,20 @@ exports.deleteCarrito = async (req, res) => {
 };
 exports.fileUpload = async (req, res) => {
     // Implementación de la subida de archivos
+     const file = await uploadFile(req.files.file)
     console.log(req.files)
-    res.json({message:"subido"})
+    res.json({message:"subido",file})
 };
 
+exports.getfilesaws = async (req, res) => {
+     const files = await getFiles();
+    console.log(files)
+    res.json({message:"Archivos",files})
+
+};
+exports.getfile =  async (req, res) => {
+    const result = await getFileURL(req.params.fileName)
+    res.json({
+        url: result
+    })
+}

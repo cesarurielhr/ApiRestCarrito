@@ -10,10 +10,14 @@ const dotenv = require('dotenv');
 const app = express();
 
 app.use(bodyParser.json());
+
+
 app.use(fileUpload({
     useTempFiles: true,
-    tempFileDir: './uploads'
-})); 
+    tempFileDir: './uploads' // Directorio temporal para los archivos
+}));
+
+ 
  // Usar fileUpload aquí
 app.use('/auth', authRoutes);
 app.use('/products', productsRoutes);
