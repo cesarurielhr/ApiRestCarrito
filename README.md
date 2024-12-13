@@ -7,10 +7,13 @@ AliExpress, entre otras, cuyo objetivo es desarrollar un sistema de carrito de c
 Este sistema permitirá gestionar productos almacenados en una base de datos y facilitará su compra por parte de los clientes, generando facturas a través del uso de APIs y servicios externos 
 
 ## Requisitos del desarrollo:
-- Tener la version de node.js: v20.x.
-- Contar con cuenta con una prueba gratuita en FacturApi
-- Contar con cuenta con una prueba de 1 año en AWS para sus serviciso de S3 y IAM
-- Crear un cuenta de herokuApp para el alojamiento de las apis
+- Tener la version de [node.js](https://nodejs.org/en/): v20.x.
+- Contar con cuenta con una prueba gratuita en [FactuApi](https://www.facturapi.io/).
+- Contar con cuenta con una prueba de 1 año en [AWS](https://aws.amazon.com/es/) para sus serviciso de S3 y IAM
+- Crear un cuenta de [herokuApp](https://www.heroku.com/) para el alojamiento de las apis
+- Desarrollo de aplicacion con tecnologias API Rest y GraphQL 
+## Link de alojamiento de la aplicacion 
+https://carrito-7dee32cb1109.herokuapp.com/
 
 
 ## Depedencias utilizadas:
