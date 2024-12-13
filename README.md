@@ -13,7 +13,7 @@ Este sistema permitirá gestionar productos almacenados en una base de datos y f
 - Crear un cuenta de [herokuApp](https://www.heroku.com/) para el alojamiento de las apis
 - Desarrollo de aplicacion con tecnologias API Rest y GraphQL 
 ## Link de alojamiento de la aplicacion 
-[https://carrito-7dee32cb1109.herokuapp.com/](https://carrito-8dd67ba6593b.herokuapp.com/)
+[[https://carrito-7dee32cb1109.herokuapp.com/](https://carrito-8dd67ba6593b.herokuapp.com/)](https://carrito-ad9b6ec75796.herokuapp.com/)
 
 
 ## Depedencias utilizadas:
