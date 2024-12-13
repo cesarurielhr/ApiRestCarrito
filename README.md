@@ -1,4 +1,4 @@
-## DESARROLO DE SERVICIOS WEB ⚛️
+## DESARROLLO DE SERVICIOS WEB ⚛️
 ## PROYECTO FINAL - WAZZA STORE 👻👅
 ## Descripcion del proyecto
 
