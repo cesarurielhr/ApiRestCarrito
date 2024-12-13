@@ -93,3 +93,8 @@ exports.getfile =  async (req, res) => {
         url: result
     })
 }
+
+exports.downloadfile = async (req, res) => {
+    await downloadFile(req.params.fileName)
+    res.json({message: "archivo descargado"})
+}

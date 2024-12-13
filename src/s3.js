@@ -38,25 +38,24 @@ async function getFiles() {
     return await client.send(command)
 }
 */
-// Exportar funciones usando CommonJS
-module.exports = { uploadFile,getFiles };
-
-/*
-
-export async function downloadFile(filename) {
+async function downloadFile(filename) {
     const command = new GetObjectCommand({
         Bucket: process.env.AWS_BUCKET_NAME,
         Key: filename
     })
     const result = await client.send(command)
     console.log(result)
-    result.Body.pipe(fs.createWriteStream(`./images/${filename}`))
+    result.Body.pipe(fs.createWriteStream(`./archivos/${filename}`))
 }
 
-export async function getFileURL(filename) {
+
+async function getFileURL(filename) {
     const command = new GetObjectCommand({
         Bucket: process.env.AWS_BUCKET_NAME,
         Key: filename
     })
     return await getSignedUrl(client, command, { expiresIn: 3600 })
-}*/
+}
+
+module.exports = { uploadFile,getFiles,downloadFile, getFileURL };
+

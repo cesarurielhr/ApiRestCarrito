@@ -10,5 +10,6 @@ router.delete('/', carritoController.deleteCarrito);
 //AWS 
 router.post('/files',carritoController.fileUpload);
 router.put('/files',carritoController.getfilesaws);
-router.get('/files/:fileName',carritoController.getfile);
+router.get('/file/:fileName',carritoController.getfile);
+router.get('/downloadfile/:fileName',carritoController.downloadfile);
 module.exports = router;
