@@ -43,6 +43,6 @@ Este sistema permitirá gestionar productos almacenados en una base de datos y f
 ## Integrantes del equipo
 - [Diaz Canalez Jose Lino.](https://github.com/JoseLinoDC)
 - [Cabral Machuca Alejandro Aaron](https://github.com/DobleAC)
-- [Hernandez Rodriguez Cesar Uriel](https://github.com/CrissCross20)
+- [Hernandez Rodriguez Cesar Uriel](https://github.com/cesarurielhr)
 - [Ibañez Parra Armando Jair](https://github.com/dev-aj001).
 - [Valdez Ponce Jose Alberto](https://github.com/JAVP013).
